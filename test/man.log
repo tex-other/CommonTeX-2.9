@@ -1,0 +1,21 @@
+This is Common TeX, Version 2.9 (preloaded format=lplain 89.6.29) 7 JUL 1989 05:56
+**&latex/lplain test/man.tex 
+(./test/man.tex
+LaTeX Version 2.09 - Released 4 November 1985
+(test/article.sty
+Document Style 'article'. Released 23 September 1985
+(test/art10.sty)
+\c@part=\count78
+\c@section=\count79
+\c@subsection=\count80
+\c@subsubsection=\count81
+\c@paragraph=\count82
+\c@subparagraph=\count83
+\c@figure=\count84
+\c@table=\count85
+) (test/man.aux) [1
+
+] (test/man.aux)
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references 
+right.
+Output written on test/man.dvi (1 page, 2896 bytes).

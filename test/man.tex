@@ -1,0 +1,75 @@
+% Document Type: LaTeX
+% Master File: d.tex
+%
+% This file is part of Wei Hong/Chuen-Tsai Sun's CS252 report
+% Copyright (C) 1988 by Wei Hong and Chuen-Tsai Sun
+% All rights reserved.
+\documentstyle{article}
+\begin{document}
+\section{Man Page}
+\label{app:man}
+
+\noindent
+{\bf NAME}
+
+genarisc - risc machine simulator generator
+
+\noindent
+{\bf SYNOPSIS}
+
+genarisc
+
+\noindent
+{\bf DESCRIPTION}
+
+GENARISC is a simulator generator designed for Reduced
+Instruction Set Computer (RISC) designers.
+To use this tool, you must have access to a INGRES database,
+because the machine descriptions are going to be stored as relations in
+INGRES database and INGRES form editor and query-by-form facilities
+will be invoked as user interface.  Once you get in GENARISC,
+you will be facing a set of forms, tables and menus, each of them are
+self-explanatory.  There are also help menu items the user can choose
+whenever confused.  All the menus are in the same conventions as
+INGRES/QBF.   After you finish editing the machine description forms,
+you may simply choose the menu item for generating simulators and the simulator
+will be generated in a few seconds.
+
+The generated simulator code will be written in C language on UNIX
+systems.  It includes two parts, steady part and changing part.
+Steady part is a library of machine independent routines
+store in {\bf /usr/public/lib/genarisc.a} and the library of
+standard UNIX system calls and subroutines.
+The generated code is put in a subdirectory called {\bf simcode} under
+the the directory you call genarisc.
+A Makefile will also be copied into the simcode directory.
+You can just do a make, and an executable simulator program called "int" will
+be generated.  The simulator can be run by typing "int file", where file
+is file name for the compiled benchmark file.  Benchmark files have to
+be compiled into binary machine instructions and a header in the UNIX
+standard a.out(5) format should be included at the beginning of the compiled
+benchmark file.
+
+\noindent
+{\bf FILE}
+
+\noindent
+genarisc.qc opsgen.qc hwgen.qc fmtgen.qc adgen.qc execgen.qc\\
+aluop.h pipeline.h type.h operation.h /usr/public/lib/genarisc.a
+
+\noindent
+{\bf SEE ALSO}
+
+INGRES
+
+\noindent
+{\bf AUTHORS}
+
+Wei Hong and Chuen-Tsai Sun
+
+\noindent
+{\bf BUGS}
+
+Mapping hierarchy is now restricted to one.  Variable length pipeline
+information is not collected.
+\end{document}
